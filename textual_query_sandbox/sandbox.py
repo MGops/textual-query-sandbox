@@ -139,58 +139,7 @@ class IDAndClassGrid(Playground):
 class QuerySandboxApp(App[None]):
     """A Textual CSS query sandbox application."""
 
-    CSS = """
-    Static {
-        color: $text-muted;
-    }
-
-    Input {
-        width: 1fr;
-    }
-
-    #input {
-        height: 4;
-    }
-
-    TabbedContent {
-        height: 2fr;
-    }
-
-    Playground * {
-        margin: 1;
-        border: panel red 40%;
-        border-title-color: $text 50%;
-    }
-
-    Playground .hit {
-        border: panel green;
-        background: green 10%;
-        border-title-color: $boost;
-    }
-
-    VerticalScroll {
-        margin-top: 1;
-        height: 1fr;
-        border: panel cornflowerblue 60%;
-        padding: 1;
-    }
-
-    VerticalScroll:focus {
-        border: panel cornflowerblue;
-    }
-
-    #output {
-        height: 1fr;
-    }
-
-    #results {
-        width: 3fr;
-    }
-
-    #tree {
-        width: 2fr;
-    }
-    """
+    CSS_PATH = "sandbox.tcss"
 
     BINDINGS = [
         Binding("f1", "playground('tab-1')"),
